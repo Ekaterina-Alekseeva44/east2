@@ -1,0 +1,198 @@
+extends ../templates/__default
+
+block vars
+  -
+    var params = {
+      pageType: 'detail',
+      pageTitle: 'Hello, developer!'
+    }
+
+block content
+  section(class="characteristic")
+    div(class="container")
+      div(class="characteristic__content")
+        div(class="characteristic__right")
+          div(class="characteristic__image-wrapper")
+            picture
+              img(class="characteristic__image" src="media/images/image1.jpg" alt="Toyota Corolla Cross Hybrid 2022")
+          div(class="characteristic__thumbnails")
+            div(class="characteristic__thumbnail-wrapper")
+              picture
+                img(class="characteristic__thumbnail" src="media/images/image2.jpg" alt="Thumbnail 1")
+            div(class="characteristic__thumbnail-wrapper")
+              picture
+                img(class="characteristic__thumbnail" src="media/images/image3.jpg" alt="Thumbnail 2")
+            div(class="characteristic__thumbnail-wrapper")
+              picture
+                img(class="characteristic__thumbnail" src="media/images/image4.jpg" alt="Thumbnail 3")
+            div(class="characteristic__thumbnail-wrapper")
+              picture
+                img(class="characteristic__thumbnail" src="media/images/image5.jpg" alt="Thumbnail 4")
+            div(class="characteristic__thumbnail-wrapper")
+              picture
+                img(class="characteristic__thumbnail" src="media/images/image6.jpg" alt="Thumbnail 5")
+          div(class="characteristic__specs")
+            h2(class="specs__title") Характеристики
+            table(class="specs__table")
+              tr(class="specs__item")
+                td(class="specs__cell") Марка
+                td(class="specs__cell specs__cell--value") Toyota
+              tr(class="specs__item")
+                td(class="specs__cell") Модель
+                td(class="specs__cell specs__cell--value") Corolla Cross hybrid
+              tr(class="specs__item")
+                td(class="specs__cell") Год
+                td(class="specs__cell specs__cell--value") 2022
+              tr(class="specs__item")
+                td(class="specs__cell") Топливо
+                td(class="specs__cell specs__cell--value") Гибридное
+              tr(class="specs__item")
+                td(class="specs__cell") Места
+                td(class="specs__cell specs__cell--value") 5
+              tr(class="specs__item")
+                td(class="specs__cell") Цвет
+                td(class="specs__cell specs__cell--value") Серый
+          div(class="characteristic__options")
+            h2(class="options__title") Опции
+            ul(class="options__list")
+              li(class="options__item")
+                svg(class="options__icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M18 1.78027L16.2216 0L5.7934 10.4395L1.77836 6.4201L0 8.20037L5.7934 14L18 1.78027Z" fill="#11327F")
+                | ABS
+              li(class="options__item")
+                svg(class="options__icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M18 1.78027L16.2216 0L5.7934 10.4395L1.77836 6.4201L0 8.20037L5.7934 14L18 1.78027Z" fill="#11327F")
+                | ESP
+              li(class="options__item")
+                svg(class="options__icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M18 1.78027L16.2216 0L5.7934 10.4395L1.77836 6.4201L0 8.20037L5.7934 14L18 1.78027Z" fill="#11327F")
+                | Камера
+              li(class="options__item")
+                svg(class="options__icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M18 1.78027L16.2216 0L5.7934 10.4395L1.77836 6.4201L0 8.20037L5.7934 14L18 1.78027Z" fill="#11327F")
+                | Противотуманные фары
+              li(class="options__item")
+                svg(class="options__icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M18 1.78027L16.2216 0L5.7934 10.4395L1.77836 6.4201L0 8.20037L5.7934 14L18 1.78027Z" fill="#11327F")
+                | Система помощи при парковке
+        div(class="characteristic__left")
+          h1(class="characteristic__title") TOYOTA COROLLA #[br]CROSS HYBRID 2022 #[br]GREY
+          p(class="catalog__card-price catalog__card-price--highlighted") 
+            | $1.350 
+            span(class="catalog__card-price__duration catalog__card-price__duration--highlighted")  / сутки
+          div(class="characteristic__form")
+            table(class="form__table")
+              tr(class="form__row")
+                td(class="form__cell")
+                  input(class="form__input" type="text" id="userName" placeholder="Ваше имя")
+              tr(class="form__row")
+                td(class="form__cell")
+                  input(class="form__input" type="text" id="userPhone" placeholder="Телефон")
+              tr(class="form__row")
+                td(class="form__cell")
+                  input(class="form__input" type="text" id="rentalDuration" placeholder="Срок аренды")
+              tr(class="form__row")
+                td(class="form__cell")
+                  button(class="btn" type="button" id="submitButton") Арендовать авто
+            p(class="success-alert" style="display: none;") Заявка успешно отправлена
+            p(class="error-alert error-alert--alert" style="display: none;") Пожалуйста, заполните все поля
+
+
+  section(class="question")
+    div(class="container")
+      div(class="question__block")
+        div(class="question__blok2")
+          h2(class="faq__title-container") Частые вопросы
+        div(class="faq__items")  
+          ul.faq
+            li.faq__item
+              input.faq__checkbox(type="checkbox", checked="")
+              div.faq__header
+                h2.faq__title Сколько стоит взять авто на&nbsp;прокат?
+                span.faq__icon
+                  svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    g(clip-path="url(#clip0_826_457)")
+                      circle(cx="15" cy="15" r="15" fill="#F4F5F9")
+                      path(d="M14.9999 16.1714L19.9497 11.2217L21.3639 12.6359L14.9999 18.9999L8.63599 12.6359L10.0502 11.2217L14.9999 16.1714Z" fill="#141838")
+                    defs
+                      clipPath(id="clip0_826_457")
+                        rect(width="30" height="30" fill="white")
+              p.faq__description Стоимость аренды авто на&nbsp;Пхукете зависит от&nbsp;марки и&nbsp;класса#[br]автомобиля, его возраста, и&nbsp;количества дней аренды. Минимальное #[br]количество дней, на&nbsp;которое вы&nbsp;можете взять машину напрокат в&nbsp;нашей #[br]компании&nbsp;&mdash; 1&nbsp;день. Чем больше дней, тем ниже цена. Стоит учитывать, #[br]что в&nbsp;высокий сезон цены на&nbsp;аренду заметно возрастают.
+            li.faq__item
+              input.faq__checkbox(type="checkbox", checked="")
+              div.faq__header
+                h2.faq__title Есть у&nbsp;авто страховка и&nbsp;депозит?
+                span.faq__icon
+                  svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    g(clip-path="url(#clip0_826_457)")
+                      circle(cx="15" cy="15" r="15" fill="#F4F5F9")
+                      path(d="M14.9999 16.1714L19.9497 11.2217L21.3639 12.6359L14.9999 18.9999L8.63599 12.6359L10.0502 11.2217L14.9999 16.1714Z" fill="#141838")
+                    defs
+                      clipPath(id="clip0_826_457")
+                        rect(width="30" height="30" fill="white")
+              p.faq__description
+            li.faq__item
+              input.faq__checkbox(type="checkbox", checked="")
+              div.faq__header
+                h2.faq__title Какие документы потребуются при оформлении?
+                span.faq__icon
+                  svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    g(clip-path="url(#clip0_826_457)")
+                      circle(cx="15" cy="15" r="15" fill="#F4F5F9")
+                      path(d="M14.9999 16.1714L19.9497 11.2217L21.3639 12.6359L14.9999 18.9999L8.63599 12.6359L10.0502 11.2217L14.9999 16.1714Z" fill="#141838")
+                    defs
+                      clipPath(id="clip0_826_457")
+                        rect(width="30" height="30" fill="white")
+              p.faq__description
+            li.faq__item
+              input.faq__checkbox(type="checkbox", checked="")
+              div.faq__header
+                h2.faq__title Есть&nbsp;ли особенности вождения в&nbsp;Таиланде?
+                span.faq__icon
+                  svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    g(clip-path="url(#clip0_826_457)")
+                      circle(cx="15" cy="15" r="15" fill="#F4F5F9")
+                      path(d="M14.9999 16.1714L19.9497 11.2217L21.3639 12.6359L14.9999 18.9999L8.63599 12.6359L10.0502 11.2217L14.9999 16.1714Z" fill="#141838")
+                    defs
+                      clipPath(id="clip0_826_457")
+                        rect(width="30" height="30" fill="white")
+              p.faq__description
+
+  section(class="contact-form")
+    div(class="container")
+      div(class="contact-form__content")
+        div(class="contact-form__question")
+          h2(class="contact-form__title") Остались вопросы?
+          p(class="contact-form__description")
+            | Заполните форму или свяжитесь с нами любым удобным #[br]для вас способом
+          p(class="contact-form__mail") pochta@gmail.com
+          p(class="contact-form__phone") +66-81-786-13-77
+          svg.contact-form__icon(width="30", height="30", viewBox="0 0 30 30", fill="none", xmlns="http://www.w3.org/2000/svg")
+            circle(cx="15", cy="15", r="15", fill="#11327F")
+            g(clip-path="url(#clip0_373_2720)")
+              path(fill-rule="evenodd", clip-rule="evenodd", d="M19.518 9.28681C19.6827 9.21747 19.863 9.19355 20.0402 9.21755C20.2173 9.24155 20.3847 9.31259 20.5251 9.42326C20.6655 9.53394 20.7736 9.68022 20.8382 9.84686C20.9029 10.0135 20.9217 10.1944 20.8926 10.3708L19.3806 19.5421C19.234 20.4268 18.2633 20.9341 17.452 20.4935C16.7733 20.1248 15.7653 19.5568 14.8586 18.9641C14.4053 18.6675 13.0166 17.7175 13.1873 17.0415C13.334 16.4635 15.6673 14.2915 17.0006 13.0001C17.524 12.4928 17.2853 12.2001 16.6673 12.6668C15.1326 13.8255 12.6686 15.5875 11.854 16.0835C11.1353 16.5208 10.7606 16.5955 10.3126 16.5208C9.49531 16.3848 8.73731 16.1741 8.11864 15.9175C7.28264 15.5708 7.32331 14.4215 8.11797 14.0868L19.518 9.28681Z", fill="white")
+            defs
+              clipPath(id="clip0_373_2720")
+                rect(width="16", height="16", fill="white", transform="translate(7 7)")
+        div(class="contact-form__info")
+          form(class="contact-form__form", id="contactForm")
+            input(type="text", placeholder="Имя", class="contact-form__input", id="name")
+            input(type="email", placeholder="Email", class="contact-form__input-email", id="email")
+            textarea(placeholder="Комментарий", class="contact-form__textarea", id="comment")
+            button(type="submit", class="contact-form__button") Отправить
+            p(class="contact-form__privacy")
+              | Нажимая «Отправить», вы соглашаетесь с 
+              a(href="#") Политикой конфиденциальности
+          p(id="success-message", class="message success-message") Форма успешно отправлена!
+          p(id="error-message", class="message error-message") Пожалуйста, заполните все поля.
+
+  section(class="rental-description")
+    div(class="container")
+      div(class="rental-description__container")
+        h1(class="rental-description__title") Аренда транспорта на&nbsp;East Wheels
+        p(class="rental-description__text") Нужна машина в&nbsp;Пхукете? Обращайтесь в&nbsp;East Wheels. Наша компания предоставит качественные услуги аренды авто на&nbsp;Пхукете в&nbsp;Тайланде. Для вас #[br]мы&nbsp;создали большой каталог автомобилей. Забронировать авто в&nbsp;East Wheels очень просто. Выберите подходящую дату и&nbsp;время аренды, свяжитесь с&nbsp;#[br]нашими менеджерами и&nbsp;они зарезервируют для вас автомобиль. Мы&nbsp;предлагаем разные способы оплаты, что очень удобно для туристов.
+      div(class="link-svg-container")
+        a(href="#" class="rental-description__read-more") Читать полностью
+        div(class="svg-container")
+          svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+            path(fill-rule="evenodd", clip-rule="evenodd", d="M0.969726 5.03026L2.03039 3.9696L6.00001 7.93923L9.96963 3.9696L11.0303 5.03026L6.00001 10.0605L0.969726 5.03026Z", fill="#141838")
